@@ -1,3 +1,127 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+@theme {
+	--color-page: #fbf6e9;
+	--color-cream: #fff8e1;
+	--color-sky-1: #bfe3f5;
+	--color-sky-2: #d8eef8;
+	--color-sky-3: #e8f6fa;
+	--color-sage: #a8d87a;
+	--color-sage-light: #c5dc8a;
+	--color-sage-dark: #7ab85a;
+	--color-ink: #3d5a2a;
+	--color-ink-2: #2a3a1a;
+	--color-fries-red: #e55934;
+	--color-fries-yellow: #ffd93d;
+	--color-fries-yellow-light: #ffe680;
+	--color-pink-1: #ffb6c1;
+	--color-pink-2: #ff8fb1;
+	--color-pink-soft: #ffd0dc;
+	--color-shroom-orange: #e58b4a;
+	--color-shroom-spot: #ffe4c0;
+	--color-shroom-body: #f5e6d3;
+	--color-link-hover: #ffe9a8;
+	--color-grass-dirt: #8b5a3c;
+
+	--font-display: 'Fredoka', 'Baloo 2', system-ui, sans-serif;
+	--font-hand: 'Caveat', 'Patrick Hand', cursive;
+}
+
+:root {
+	/* 12px top + 44px logo + 12px bottom + 3px border = 71px */
+	--nav-height: 71px;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background: var(--color-page);
+	color: var(--color-ink);
+	font-family: var(--font-display);
+	font-weight: 500;
+	-webkit-font-smoothing: antialiased;
+	min-height: 100vh;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+button {
+	font-family: inherit;
+}
+
+a {
+	color: inherit;
+}
+
+::selection {
+	background: var(--color-fries-yellow);
+	color: var(--color-ink);
+}
+
+/* Reusable chunky shadow + border tokens */
+.df-card {
+	background: #fff;
+	border: 3px solid var(--color-ink);
+	border-radius: 20px;
+	box-shadow: 0 4px 0 rgba(61, 90, 42, 0.18);
+}
+
+.df-pill {
+	border: 2.5px solid var(--color-ink);
+	border-radius: 999px;
+}
+
+.df-shadow-pop {
+	box-shadow: 0 4px 0 var(--color-ink);
+	transition:
+		transform 0.1s ease,
+		box-shadow 0.1s ease;
+}
+
+.df-shadow-pop:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 5px 0 var(--color-ink);
+}
+
+.df-shadow-pop:active {
+	transform: translateY(3px);
+	box-shadow: 0 1px 0 var(--color-ink);
+}
+
+/* Subtle bobbing animation reused for the hero dino + sparkles */
+@keyframes df-bob {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-6px);
+	}
+}
+
+@keyframes df-twinkle {
+	0%,
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.6;
+		transform: scale(0.85);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+	}
+}
