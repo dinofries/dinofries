@@ -36,8 +36,7 @@
 	<!-- Map-name banner (top-right). Hides on mobile. -->
 	<div class="map-banner" aria-hidden="true">
 		<span class="map-icon">▣</span>
-		<span class="map-name">DINOFRIES WORLD</span>
-		<span class="map-ch">· CH. 1</span>
+		<span class="map-ch">CH. 1</span>
 	</div>
 
 	{#each sparkles as sp, i (i)}
@@ -51,10 +50,6 @@
 	{/each}
 
 	<div class="content">
-		<div class="welcome-row">
-			<span class="welcome">welcome to</span>
-		</div>
-
 		<div class="logo-stage">
 			<!-- Pixel-art lightbulb hint floating above the logo -->
 			<div class="quest" aria-hidden="true">
@@ -116,13 +111,6 @@
 		</div>
 
 		<h1 class="title">dinofries</h1>
-
-		<p class="tagline">where dinosaurs &amp; fries rule the world</p>
-
-		<div class="buttons">
-			<a class="btn primary df-shadow-pop" href="#about">explore the site →</a>
-			<a class="btn secondary df-shadow-pop" href="#art">see community art</a>
-		</div>
 	</div>
 
 	<div class="cloud-deco cloud-1" aria-hidden="true"></div>
@@ -324,20 +312,6 @@
 		gap: 14px;
 	}
 
-	.welcome-row {
-		display: flex;
-		justify-content: center;
-		margin-bottom: -6px;
-	}
-	.welcome {
-		font-family: var(--font-hand);
-		font-size: 44px;
-		color: var(--color-ink);
-		font-weight: 700;
-		transform: rotate(-3deg);
-		display: inline-block;
-	}
-
 	.logo-stage {
 		position: relative;
 		display: inline-block;
@@ -402,39 +376,6 @@
 		-webkit-text-stroke: 3px var(--color-ink);
 		text-shadow: 6px 6px 0 var(--color-ink);
 		letter-spacing: -2px;
-	}
-
-	.tagline {
-		font-size: clamp(16px, 2vw, 20px);
-		font-weight: 700;
-		color: var(--color-ink);
-		margin: 0;
-	}
-
-	.buttons {
-		display: flex;
-		gap: 12px;
-		flex-wrap: wrap;
-		justify-content: center;
-		margin-top: 8px;
-	}
-	.btn {
-		padding: 12px 22px;
-		border: 2.5px solid var(--color-ink);
-		border-radius: 999px;
-		font-size: 15px;
-		font-weight: 700;
-		color: var(--color-ink);
-		text-decoration: none;
-		display: inline-flex;
-		align-items: center;
-		gap: 6px;
-	}
-	.btn.primary {
-		background: var(--color-sage);
-	}
-	.btn.secondary {
-		background: #fff;
 	}
 
 	/* Pixel ground horizon */

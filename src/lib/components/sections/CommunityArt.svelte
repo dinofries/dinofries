@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { communityArt, submitInstructions } from '$lib/data/community-art';
+	import { communityArt } from '$lib/data/community-art';
 
 	const placeholderCount = 6;
 	const placeholderSlots = Array.from({ length: placeholderCount }, (_, i) => i);
@@ -11,19 +11,13 @@
 		'add one!',
 		'free spot'
 	];
-
-	const submitHref = submitInstructions.discordInvite;
 </script>
 
 <section class="community" id="art">
 	<div class="inner">
 		<header class="header">
 			<span class="kicker">★ community wall ★</span>
-			<h2>fan-made, hand-made</h2>
-			<p>
-				a wall of art from friends &amp; visitors. all human, no robots —
-				submit your own to get featured.
-			</p>
+			<p>submit your art to get featured here</p>
 		</header>
 
 		{#if communityArt.length > 0}
@@ -86,18 +80,6 @@
 			</p>
 		{/if}
 
-		<div class="submit-card">
-			<div class="submit-text">
-				<div class="submit-heading">{submitInstructions.heading}</div>
-				<p>{submitInstructions.body}</p>
-			</div>
-			<a
-				class="submit-btn df-shadow-pop"
-				href={submitHref}
-				target="_blank"
-				rel="noopener noreferrer"
-			>send a piece →</a>
-		</div>
 	</div>
 </section>
 
@@ -122,15 +104,6 @@
 		font-weight: 700;
 		display: inline-block;
 		transform: rotate(-2deg);
-	}
-	.header h2 {
-		font-size: clamp(32px, 5vw, 52px);
-		font-weight: 800;
-		margin: 4px 0 8px;
-		color: var(--color-sage-light);
-		-webkit-text-stroke: 2px var(--color-ink);
-		text-shadow: 4px 4px 0 var(--color-ink);
-		letter-spacing: -1px;
 	}
 	.header p {
 		font-size: 15px;
@@ -274,43 +247,4 @@
 		color: var(--color-fries-red);
 	}
 
-	.submit-card {
-		display: flex;
-		align-items: center;
-		gap: 18px;
-		flex-wrap: wrap;
-		background: var(--color-link-hover);
-		border: 3px solid var(--color-ink);
-		border-radius: 18px;
-		padding: 18px 22px;
-		box-shadow: 0 4px 0 rgba(61, 90, 42, 0.18);
-	}
-	.submit-text {
-		flex: 1;
-		min-width: 220px;
-	}
-	.submit-heading {
-		font-family: var(--font-hand);
-		font-size: 28px;
-		font-weight: 700;
-		color: var(--color-ink);
-		line-height: 1;
-		margin-bottom: 4px;
-	}
-	.submit-text p {
-		margin: 0;
-		font-size: 14px;
-		line-height: 1.5;
-		color: #4a6a3a;
-	}
-	.submit-btn {
-		padding: 12px 22px;
-		background: var(--color-fries-red);
-		color: #fff;
-		border: 3px solid var(--color-ink);
-		border-radius: 999px;
-		font-size: 15px;
-		font-weight: 800;
-		text-decoration: none;
-	}
 </style>

@@ -9,7 +9,7 @@
 			<span class="dot" aria-hidden="true">·</span>
 			<a href="#home" class="up">back to top ↑</a>
 		</div>
-		<div class="meta">© {year} dinofries.com — made with care, dinos &amp; fries</div>
+		<div class="meta">© {year} dinofries.com — made by <a class="credit" href="https://claude.com/claude-code" target="_blank" rel="noopener noreferrer">Claude</a></div>
 	</div>
 </footer>
 
@@ -52,5 +52,11 @@
 	.meta {
 		font-size: 12px;
 		opacity: 0.7;
+	}
+	.credit {
+		color: var(--color-fries-yellow);
+		text-decoration: underline;
+		text-underline-offset: 2px;
+		font-weight: 700;
 	}
 </style>

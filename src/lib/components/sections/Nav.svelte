@@ -1,12 +1,17 @@
 <script lang="ts">
-	type Item = { name: string; href: string };
-	type Props = { items: Item[]; active: string; onSelect: (name: string) => void };
-	let { items, active, onSelect }: Props = $props();
+	type Item = {
+		name: string;
+		href: string;
+		external?: boolean;
+		icon?: string;
+		color?: string;
+	};
+	type Props = { items: Item[] };
+	let { items }: Props = $props();
 
 	let menuOpen = $state(false);
 
-	function handleSelect(name: string) {
-		onSelect(name);
+	function closeMenu() {
 		menuOpen = false;
 	}
 
@@ -19,7 +24,7 @@
 
 <nav class="nav-bar">
 	<div class="inner">
-		<a class="brand" href="#home" onclick={() => handleSelect('Home')} aria-label="dinofries home">
+		<a class="brand" href="#home" onclick={closeMenu} aria-label="dinofries home">
 			<img src="/logo.png" alt="" class="brand-logo" width="44" height="44" />
 			<span class="brand-text">dinofries</span>
 		</a>
@@ -41,11 +46,22 @@
 			{#each items as item (item.name)}
 				<a
 					class="item"
-					class:active={active === item.name}
 					href={item.href}
-					onclick={() => handleSelect(item.name)}
+					target={item.external ? '_blank' : undefined}
+					rel={item.external ? 'noopener noreferrer' : undefined}
+					onclick={closeMenu}
 				>
-					{item.name}
+					{#if item.icon}
+						<svg
+							class="item-icon"
+							viewBox="0 0 24 24"
+							aria-hidden="true"
+							style:color={item.color}
+						>
+							<path d={item.icon} fill="currentColor" />
+						</svg>
+					{/if}
+					<span>{item.name}</span>
 				</a>
 			{/each}
 		</div>
@@ -93,6 +109,9 @@
 		flex-wrap: wrap;
 	}
 	.item {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
 		padding: 8px 14px;
 		border: 2px solid transparent;
 		border-radius: 999px;
@@ -102,12 +121,13 @@
 		text-decoration: none;
 		transition: all 0.15s;
 	}
+	.item-icon {
+		width: 18px;
+		height: 18px;
+		flex-shrink: 0;
+	}
 	.item:hover {
 		background: var(--color-link-hover);
-	}
-	.item.active {
-		background: var(--color-sage);
-		border-color: var(--color-ink);
 	}
 
 	/* Hamburger — desktop hides it */
@@ -202,8 +222,7 @@
 			background: #fff;
 			border-color: var(--color-ink);
 		}
-		.item:hover,
-		.item.active {
+		.item:hover {
 			background: var(--color-sage);
 		}
 	}
