@@ -24,11 +24,6 @@
 
 <nav class="nav-bar">
 	<div class="inner">
-		<a class="brand" href="#home" onclick={closeMenu} aria-label="dinofries home">
-			<img src="/logo.png" alt="" class="brand-logo" width="44" height="44" />
-			<span class="brand-text">dinofries</span>
-		</a>
-
 		<button
 			class="burger"
 			class:open={menuOpen}
@@ -83,30 +78,14 @@
 		padding: 12px 24px;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 		gap: 16px;
-	}
-	.brand {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		text-decoration: none;
-	}
-	.brand-logo {
-		display: block;
-		object-fit: contain;
-		image-rendering: -webkit-optimize-contrast;
-	}
-	.brand-text {
-		font-weight: 800;
-		font-size: 22px;
-		color: var(--color-ink);
-		letter-spacing: -0.5px;
 	}
 	.items {
 		display: flex;
 		gap: 4px;
 		flex-wrap: wrap;
+		justify-content: center;
 	}
 	.item {
 		display: inline-flex;

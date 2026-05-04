@@ -9,7 +9,7 @@
 			<span class="dot" aria-hidden="true">·</span>
 			<a href="#home" class="up">back to top ↑</a>
 		</div>
-		<div class="meta">© {year} dinofries.com — made by <a class="credit" href="https://claude.com/claude-code" target="_blank" rel="noopener noreferrer">Claude</a></div>
+		<div class="meta">© {year} dinofries — <a class="credit" href="https://dinofries.com">dinofries.com</a></div>
 	</div>
 </footer>
 

@@ -16,7 +16,7 @@
 	<!-- Player-stats HUD (top-left). Hides on mobile. -->
 	<aside class="hud" aria-hidden="true">
 		<div class="hud-head">
-			<span class="lvl">Lv. 200</span>
+			<span class="lvl">LV. 200</span>
 			<span class="char">dinofries</span>
 		</div>
 		<div class="bar-row">
