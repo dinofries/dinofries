@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import PixelSparkle from '../sprites/PixelSparkle.svelte';
 
 	const sparkles = [
@@ -107,7 +108,7 @@
 				<span>you found me!</span>
 				<div class="speech-tail"></div>
 			</div>
-			<img src="/logo.png" alt="dinofries" class="logo" width="380" height="380" />
+			<img src="{base}/logo.png" alt="dinofries" class="logo" width="380" height="380" />
 		</div>
 
 		<h1 class="title">dinofries</h1>

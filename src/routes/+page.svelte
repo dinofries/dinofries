@@ -2,8 +2,8 @@
 	import Nav from '$lib/components/sections/Nav.svelte';
 	import Hero from '$lib/components/sections/Hero.svelte';
 	import About from '$lib/components/sections/About.svelte';
-	import QuickLinks from '$lib/components/sections/QuickLinks.svelte';
-	import CommunityArt from '$lib/components/sections/CommunityArt.svelte';
+	// import QuickLinks from '$lib/components/sections/QuickLinks.svelte';
+	// import CommunityArt from '$lib/components/sections/CommunityArt.svelte';
 	import Footer from '$lib/components/sections/Footer.svelte';
 
 	const navItems = [
@@ -45,6 +45,6 @@
 <Nav items={navItems} />
 <Hero />
 <About />
-<QuickLinks />
-<CommunityArt />
+<!-- <QuickLinks /> -->
+<!-- <CommunityArt /> -->
 <Footer />
