@@ -9,7 +9,7 @@
 			<span class="dot" aria-hidden="true">·</span>
 			<a href="#home" class="up">back to top ↑</a>
 		</div>
-		<div class="meta">© {year} dinofries — <a class="credit" href="https://dinofries.com">dinofries.com</a></div>
+		<div class="meta">© {year} dinofries — <a class="credit" href="https://dinofries.com">dinofries.com</a> — made with ❤️ and 🍟 by <a class="credit" href="https://github.com/MatthewTroke" target="_blank" rel="noopener noreferrer">matthew</a></div>
 	</div>
 </footer>
 
