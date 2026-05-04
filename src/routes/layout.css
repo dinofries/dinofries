@@ -30,8 +30,8 @@
 }
 
 :root {
-	/* 12px top + 44px logo + 12px bottom + 3px border = 71px */
-	--nav-height: 71px;
+	--nav-height: 72px;
+	--footer-height: 64px;
 }
 
 html,
@@ -43,7 +43,12 @@ body {
 	font-family: var(--font-display);
 	font-weight: 500;
 	-webkit-font-smoothing: antialiased;
+}
+
+body {
 	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 * {

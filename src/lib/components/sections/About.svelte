@@ -7,11 +7,12 @@
 		<div class="card">
 			<div class="tab">about</div>
 
-			<div class="greeting">Hi, I'm Matt! AKA &ldquo;dinofries&rdquo; 👋</div>
+			<div class="greeting">hi, i'm Matt! AKA &ldquo;dinofries&rdquo; 👋</div>
 
 			<p>
-				And I Create Content On <a class="yt" href="https://www.youtube.com/@dinofries" target="_blank" rel="noopener noreferrer">YouTube</a>.
+				i create gaming content on <a class="yt" href="https://www.youtube.com/@dinofries" target="_blank" rel="noopener noreferrer">YouTube</a>
 			</p>
+			<p>open to sponsorships and collaborations</p>
 
 		</div>
 	</div>
@@ -20,7 +21,7 @@
 <style>
 	.about {
 		position: relative;
-		padding: 80px 24px 64px;
+		padding: 32px 24px 28px;
 		background: var(--color-page);
 	}
 	.dot-pattern {
@@ -44,7 +45,7 @@
 		background: #fff;
 		border: 3px solid var(--color-ink);
 		border-radius: 20px;
-		padding: 36px 32px 28px;
+		padding: 24px 28px 20px;
 		box-shadow: 0 6px 0 rgba(61, 90, 42, 0.18);
 	}
 	.tab {
@@ -61,9 +62,9 @@
 		letter-spacing: 0.5px;
 	}
 	.greeting {
-		font-size: 28px;
+		font-size: 24px;
 		font-weight: 800;
-		margin-bottom: 14px;
+		margin-bottom: 10px;
 		color: var(--color-ink);
 	}
 	.card p {

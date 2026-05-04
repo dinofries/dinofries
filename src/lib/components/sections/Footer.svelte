@@ -4,59 +4,58 @@
 
 <footer class="footer" id="contact">
 	<div class="inner">
-		<div class="row">
-			<a href="mailto:contact@dinofries.com" class="email">contact@dinofries.com</a>
-			<span class="dot" aria-hidden="true">·</span>
-			<a href="#home" class="up">back to top ↑</a>
-		</div>
-		<div class="meta">© {year} dinofries — <a class="credit" href="https://dinofries.com">dinofries.com</a> — made with ❤️ and 🍟 by <a class="credit" href="https://github.com/MatthewTroke" target="_blank" rel="noopener noreferrer">matthew</a></div>
+		<a href="mailto:contact@dinofries.com" class="email">contact@dinofries.com</a>
+		<span class="dash" aria-hidden="true">—</span>
+		<span class="muted">© {year} dinofries</span>
+		<span class="dash" aria-hidden="true">—</span>
+		<a class="link" href="https://dinofries.com">dinofries.com</a>
+		<span class="dash" aria-hidden="true">—</span>
+		<span class="muted">made with ❤️ and 🍟 by</span>
+		<a class="link" href="https://github.com/MatthewTroke" target="_blank" rel="noopener noreferrer">matthew</a>
 	</div>
 </footer>
 
 <style>
 	.footer {
-		padding: 32px 24px 40px;
+		padding: 20px 24px;
 		background: var(--color-ink);
 		color: #f0e8d8;
 	}
 	.inner {
-		max-width: 1080px;
+		max-width: 1180px;
 		margin: 0 auto;
 		display: flex;
-		flex-direction: column;
+		flex-wrap: nowrap;
 		align-items: center;
+		justify-content: center;
 		gap: 8px;
 		text-align: center;
-	}
-	.row {
-		display: flex;
-		gap: 12px;
-		align-items: center;
-		flex-wrap: wrap;
-		justify-content: center;
+		font-size: 14px;
+		white-space: nowrap;
 	}
 	.email,
-	.up {
+	.link {
 		color: var(--color-fries-yellow);
 		text-decoration: none;
 		font-weight: 700;
-		font-size: 15px;
 	}
 	.email:hover,
-	.up:hover {
+	.link:hover {
 		text-decoration: underline;
 	}
-	.dot {
+	.muted {
+		opacity: 0.85;
+	}
+	.dash {
 		opacity: 0.5;
 	}
-	.meta {
-		font-size: 12px;
-		opacity: 0.7;
-	}
-	.credit {
-		color: var(--color-fries-yellow);
-		text-decoration: underline;
-		text-underline-offset: 2px;
-		font-weight: 700;
+
+	@media (max-width: 720px) {
+		.inner {
+			flex-wrap: wrap;
+			gap: 6px;
+			font-size: 12px;
+			white-space: normal;
+		}
 	}
 </style>

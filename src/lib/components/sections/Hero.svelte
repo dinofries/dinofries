@@ -17,7 +17,7 @@
 	<!-- Player-stats HUD (top-left). Hides on mobile. -->
 	<aside class="hud" aria-hidden="true">
 		<div class="hud-head">
-			<span class="lvl">LV. 200</span>
+			<span class="lvl">LV. 31</span>
 			<span class="char">dinofries</span>
 		</div>
 		<div class="bar-row">
@@ -112,6 +112,15 @@
 		</div>
 
 		<h1 class="title">dinofries</h1>
+
+		<div class="about-card" id="about">
+			<div class="about-tab">about</div>
+			<div class="about-greeting">hi, i'm Matt! AKA &ldquo;dinofries&rdquo; 👋</div>
+			<p>
+				i create gaming content on <a class="yt" href="https://www.youtube.com/@dinofries" target="_blank" rel="noopener noreferrer">YouTube</a>
+			</p>
+			<p>open to sponsorships and collaborations</p>
+		</div>
 	</div>
 
 	<div class="cloud-deco cloud-1" aria-hidden="true"></div>
@@ -133,13 +142,12 @@
 <style>
 	.hero {
 		position: relative;
-		min-height: calc(100vh - var(--nav-height));
-		min-height: calc(100dvh - var(--nav-height));
+		flex: 1 0 auto;
 		overflow: hidden;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 40px 24px 140px;
+		padding: 12px 24px 50px;
 	}
 	.hero-bg {
 		position: absolute;
@@ -307,10 +315,58 @@
 		z-index: 3;
 		text-align: center;
 		max-width: 760px;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 14px;
+	}
+
+	.about-card {
+		position: relative;
+		width: 100%;
+		max-width: 560px;
+		background: #fff;
+		border: 3px solid var(--color-ink);
+		border-radius: 20px;
+		padding: 22px 26px 18px;
+		box-shadow: 0 6px 0 rgba(61, 90, 42, 0.18);
+		text-align: left;
+		margin-top: 6px;
+	}
+	.about-tab {
+		position: absolute;
+		top: -16px;
+		left: 24px;
+		background: var(--color-fries-yellow);
+		border: 3px solid var(--color-ink);
+		border-radius: 999px;
+		padding: 3px 16px;
+		font-size: 13px;
+		font-weight: 800;
+		text-transform: lowercase;
+		letter-spacing: 0.5px;
+	}
+	.about-greeting {
+		font-size: 22px;
+		font-weight: 800;
+		margin-bottom: 8px;
+		color: var(--color-ink);
+	}
+	.about-card p {
+		font-size: 14px;
+		line-height: 1.5;
+		margin: 0 0 4px;
+		color: #4a6a3a;
+	}
+	.about-card p:last-child {
+		margin-bottom: 0;
+	}
+	.yt {
+		color: var(--color-fries-red);
+		font-weight: 700;
+		text-decoration: underline;
+		text-underline-offset: 3px;
 	}
 
 	.logo-stage {
@@ -318,7 +374,7 @@
 		display: inline-block;
 	}
 	.logo {
-		width: clamp(220px, 36vw, 380px);
+		width: clamp(180px, 26vw, 280px);
 		height: auto;
 		display: block;
 		animation: df-bob 4.5s ease-in-out infinite;
@@ -369,7 +425,7 @@
 	}
 
 	.title {
-		font-size: clamp(56px, 11vw, 128px);
+		font-size: clamp(44px, 8vw, 88px);
 		font-weight: 800;
 		line-height: 0.95;
 		margin: 0;
@@ -385,16 +441,16 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		height: 60px;
+		height: 36px;
 		z-index: 1;
 		pointer-events: none;
 	}
 	.ground-grass-tips {
 		position: absolute;
-		bottom: 56px;
+		bottom: 32px;
 		left: 0;
 		right: 0;
-		height: 6px;
+		height: 5px;
 		background-image: repeating-linear-gradient(
 			90deg,
 			var(--color-sage-dark) 0,
@@ -405,10 +461,10 @@
 	}
 	.ground-grass {
 		position: absolute;
-		bottom: 44px;
+		bottom: 24px;
 		left: 0;
 		right: 0;
-		height: 14px;
+		height: 10px;
 		background: var(--color-sage-dark);
 		border-top: 3px solid var(--color-ink);
 		border-bottom: 3px solid var(--color-ink);
@@ -418,7 +474,7 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-		height: 44px;
+		height: 24px;
 		background: var(--color-grass-dirt);
 	}
 	.pebble {
@@ -434,21 +490,8 @@
 		.map-banner {
 			display: none;
 		}
-		.ground {
-			height: 48px;
-		}
-		.ground-grass {
-			bottom: 32px;
-			height: 12px;
-		}
-		.ground-grass-tips {
-			bottom: 44px;
-		}
-		.ground-dirt {
-			height: 32px;
-		}
 		.hero {
-			padding-bottom: 110px;
+			padding-bottom: 50px;
 		}
 	}
 	@media (max-width: 600px) {
