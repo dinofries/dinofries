@@ -114,11 +114,8 @@
 		<h1 class="title">dinofries</h1>
 
 		<div class="about-card" id="about">
-			<div class="about-tab">about</div>
-			<div class="about-greeting">hi, i'm Matt! AKA &ldquo;dinofries&rdquo; 👋</div>
-			<p>
-				i create gaming content on <a class="yt" href="https://www.youtube.com/@dinofries" target="_blank" rel="noopener noreferrer">YouTube</a>
-			</p>
+			<div class="about-greeting">hi, i'm Matt! AKA &ldquo;dinofries&rdquo;</div>
+			<p>i create gaming content on YouTube</p>
 			<p>open to sponsorships and collaborations</p>
 		</div>
 	</div>
@@ -147,7 +144,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 12px 24px 50px;
+		padding: 8px 24px 32px;
 	}
 	.hero-bg {
 		position: absolute;
@@ -319,62 +316,40 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 14px;
+		gap: 8px;
 	}
 
 	.about-card {
 		position: relative;
 		width: 100%;
-		max-width: 560px;
+		max-width: 600px;
 		background: #fff;
 		border: 3px solid var(--color-ink);
 		border-radius: 20px;
-		padding: 22px 26px 18px;
+		padding: 18px 26px 16px;
 		box-shadow: 0 6px 0 rgba(61, 90, 42, 0.18);
 		text-align: left;
-		margin-top: 6px;
+		margin-top: 4px;
 	}
-	.about-tab {
-		position: absolute;
-		top: -16px;
-		left: 24px;
-		background: var(--color-fries-yellow);
-		border: 3px solid var(--color-ink);
-		border-radius: 999px;
-		padding: 3px 16px;
-		font-size: 13px;
-		font-weight: 800;
-		text-transform: lowercase;
-		letter-spacing: 0.5px;
-	}
-	.about-greeting {
+	.about-greeting,
+	.about-card p {
 		font-size: 22px;
 		font-weight: 800;
-		margin-bottom: 8px;
+		line-height: 1.35;
+		margin: 0 0 6px;
 		color: var(--color-ink);
-	}
-	.about-card p {
-		font-size: 14px;
-		line-height: 1.5;
-		margin: 0 0 4px;
-		color: #4a6a3a;
 	}
 	.about-card p:last-child {
 		margin-bottom: 0;
-	}
-	.yt {
-		color: var(--color-fries-red);
-		font-weight: 700;
-		text-decoration: underline;
-		text-underline-offset: 3px;
 	}
 
 	.logo-stage {
 		position: relative;
 		display: inline-block;
+		margin-top: 30px;
 	}
 	.logo {
-		width: clamp(180px, 26vw, 280px);
+		width: clamp(200px, 28vw, 300px);
 		height: auto;
 		display: block;
 		animation: df-bob 4.5s ease-in-out infinite;
@@ -425,7 +400,7 @@
 	}
 
 	.title {
-		font-size: clamp(44px, 8vw, 88px);
+		font-size: clamp(48px, 8.5vw, 96px);
 		font-weight: 800;
 		line-height: 0.95;
 		margin: 0;
