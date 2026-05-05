@@ -2,7 +2,7 @@
 	<div class="inner">
 		<a href="mailto:contact@dinofries.com" class="link">contact@dinofries.com</a>
 		<span class="sep" aria-hidden="true">~</span>
-		<a class="link" href="https://github.com/MatthewTroke" target="_blank" rel="noopener noreferrer">made by matthew</a>
+		<a class="link" href="https://github.com/MatthewTroke" target="_blank" rel="noopener noreferrer">made by Matthew Troke</a>
 	</div>
 </footer>
 

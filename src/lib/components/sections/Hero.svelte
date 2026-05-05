@@ -115,7 +115,7 @@
 
 		<div class="about-card" id="about">
 			<div class="about-greeting">hi, i'm Matt! AKA &ldquo;dinofries&rdquo;</div>
-			<p>i create gaming content on YouTube</p>
+			<p>i create gaming content on YouTube :)</p>
 			<p>open to sponsorships and collaborations</p>
 		</div>
 	</div>
@@ -212,6 +212,7 @@
 	.hud-head {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: 6px;
 		margin-bottom: 6px;
 	}
@@ -328,7 +329,7 @@
 		border-radius: 20px;
 		padding: 18px 26px 16px;
 		box-shadow: 0 6px 0 rgba(61, 90, 42, 0.18);
-		text-align: left;
+		text-align: center;
 		margin-top: 4px;
 	}
 	.about-greeting,
@@ -357,8 +358,8 @@
 	}
 	.speech {
 		position: absolute;
-		top: 8%;
-		right: -38px;
+		top: -10px;
+		right: -64px;
 		background: #fff;
 		border: 2.5px solid var(--color-ink);
 		border-radius: 14px;
