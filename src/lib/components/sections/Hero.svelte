@@ -9,6 +9,26 @@
 		{ top: '78%', left: '82%', s: 16, delay: 0.3, c: '#FF8FB1' },
 		{ top: '50%', left: '6%', s: 10, delay: 0.9 }
 	];
+
+	type Game = {
+		title: string;
+		href: string;
+		image: string;
+	};
+
+	const games: Game[] = [
+		{
+			title: "Soul's Remnant",
+			href: 'https://store.steampowered.com/app/3451980/Souls_Remnant/',
+			image: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3451980/header.jpg'
+		},
+		{
+			title: 'Combo Devils',
+			href: 'https://store.steampowered.com/app/2697620/Combo_Devils/',
+			image:
+				'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2697620/a03e72c19ca66c0b89e902af9b6f78eda93eefde/header.jpg'
+		}
+	];
 </script>
 
 <section class="hero" id="home">
@@ -117,6 +137,20 @@
 			<div class="about-greeting">hi, i'm Matt! AKA &ldquo;dinofries&rdquo;</div>
 			<p>i create gaming content on YouTube</p>
 			<p>and do indie games marketing/communications</p>
+		</div>
+
+		<div class="games-row">
+			{#each games as game (game.title)}
+				<a
+					class="game-link"
+					href={game.href}
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label={`View ${game.title} on Steam`}
+				>
+					<img src={game.image} alt={`${game.title} on Steam`} loading="lazy" />
+				</a>
+			{/each}
 		</div>
 	</div>
 
@@ -342,6 +376,38 @@
 	}
 	.about-card p:last-child {
 		margin-bottom: 0;
+	}
+
+	.games-row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 14px;
+		margin-top: 6px;
+		width: 100%;
+		max-width: 600px;
+	}
+	.game-link {
+		display: block;
+		flex: 1 1 220px;
+		max-width: 260px;
+		border: 3px solid var(--color-ink);
+		border-radius: 14px;
+		overflow: hidden;
+		line-height: 0;
+		box-shadow: 0 6px 0 rgba(61, 90, 42, 0.18);
+		transition:
+			transform 0.15s ease,
+			box-shadow 0.15s ease;
+	}
+	.game-link:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 8px 0 rgba(61, 90, 42, 0.18);
+	}
+	.game-link img {
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 
 	.logo-stage {
