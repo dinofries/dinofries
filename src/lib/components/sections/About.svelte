@@ -10,9 +10,9 @@
 			<div class="greeting">hi, i'm Matt! AKA &ldquo;dinofries&rdquo; 👋</div>
 
 			<p>
-				i create gaming content on <a class="yt" href="https://www.youtube.com/@dinofries" target="_blank" rel="noopener noreferrer">YouTube</a>
+				i create gaming content on YouTube
 			</p>
-			<p>open to sponsorships and collaborations</p>
+			<p>and do indie games marketing/communications</p>
 
 		</div>
 	</div>
