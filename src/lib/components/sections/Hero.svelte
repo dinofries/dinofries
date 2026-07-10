@@ -115,8 +115,8 @@
 
 		<div class="about-card" id="about">
 			<div class="about-greeting">hi, i'm Matt! AKA &ldquo;dinofries&rdquo;</div>
-			<p>i create gaming content on YouTube :)</p>
-			<p>open to sponsorships and collaborations</p>
+			<p>i create gaming content on YouTube</p>
+			<p>and do indie games marketing/communications</p>
 		</div>
 	</div>
 
