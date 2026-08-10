@@ -16,18 +16,6 @@
 		image: string;
 	};
 
-	const games: Game[] = [
-		{
-			title: "Soul's Remnant",
-			href: 'https://store.steampowered.com/app/3451980/Souls_Remnant/',
-			image: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3451980/header.jpg'
-		},
-		{
-			title: 'Combo Devils',
-			href: 'https://store.steampowered.com/app/2697620/Combo_Devils/',
-			image:
-				'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2697620/a03e72c19ca66c0b89e902af9b6f78eda93eefde/header.jpg'
-		}
 	];
 </script>
 
@@ -134,9 +122,9 @@
 		<h1 class="title">dinofries</h1>
 
 		<div class="about-card" id="about">
-			<div class="about-greeting">hi, i'm Matt! AKA &ldquo;dinofries&rdquo;</div>
-			<p>i create gaming content on YouTube</p>
-			<p>and do indie games marketing/communications</p>
+			<div class="about-greeting">hi, i'm Matt!</div>
+			<p>i create gaming content</p>
+			<p>on YouTube and Twitch</p>
 		</div>
 
 		<div class="games-row">
