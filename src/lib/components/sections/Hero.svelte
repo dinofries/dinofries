@@ -119,21 +119,6 @@
 			<p>on YouTube and Twitch</p>
 		</div>
 
-		<div class="games-row">
-			{#each games as game (game.title)}
-				<a
-					class="game-link"
-					href={game.href}
-					target="_blank"
-					rel="noopener noreferrer"
-					aria-label={`View ${game.title} on Steam`}
-				>
-					<img src={game.image} alt={`${game.title} on Steam`} loading="lazy" />
-				</a>
-			{/each}
-		</div>
-	</div>
-
 	<div class="cloud-deco cloud-1" aria-hidden="true"></div>
 	<div class="cloud-deco cloud-2" aria-hidden="true"></div>
 	<div class="cloud-deco cloud-3" aria-hidden="true"></div>
