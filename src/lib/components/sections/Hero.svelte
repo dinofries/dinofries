@@ -118,6 +118,7 @@
 			<p>i create gaming content</p>
 			<p>on YouTube and Twitch</p>
 		</div>
+	</div>
 
 	<div class="cloud-deco cloud-1" aria-hidden="true"></div>
 	<div class="cloud-deco cloud-2" aria-hidden="true"></div>
@@ -143,7 +144,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 8px 24px 32px;
+		padding: 8px 24px 56px;
 	}
 	.hero-bg {
 		position: absolute;
@@ -341,38 +342,6 @@
 	}
 	.about-card p:last-child {
 		margin-bottom: 0;
-	}
-
-	.games-row {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 14px;
-		margin-top: 6px;
-		width: 100%;
-		max-width: 600px;
-	}
-	.game-link {
-		display: block;
-		flex: 1 1 220px;
-		max-width: 260px;
-		border: 3px solid var(--color-ink);
-		border-radius: 14px;
-		overflow: hidden;
-		line-height: 0;
-		box-shadow: 0 6px 0 rgba(61, 90, 42, 0.18);
-		transition:
-			transform 0.15s ease,
-			box-shadow 0.15s ease;
-	}
-	.game-link:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 8px 0 rgba(61, 90, 42, 0.18);
-	}
-	.game-link img {
-		width: 100%;
-		height: auto;
-		display: block;
 	}
 
 	.logo-stage {
