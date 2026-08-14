@@ -9,12 +9,6 @@
 		{ top: '78%', left: '82%', s: 16, delay: 0.3, c: '#FF8FB1' },
 		{ top: '50%', left: '6%', s: 10, delay: 0.9 }
 	];
-
-	type Game = {
-		title: string;
-		href: string;
-		image: string;
-	};
 </script>
 
 <section class="hero" id="home">
