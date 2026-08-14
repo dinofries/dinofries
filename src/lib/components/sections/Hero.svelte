@@ -15,8 +15,6 @@
 		href: string;
 		image: string;
 	};
-
-	];
 </script>
 
 <section class="hero" id="home">
